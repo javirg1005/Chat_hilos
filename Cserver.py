@@ -5,8 +5,8 @@ import pickle
 import os
 
 class Servidor():
-	puerto = input('\nEscriba el puerto \n') 	##Pide introducir puerto
-	def __init__(self, host=socket.gethostname(), port=puerto):
+	 	##Pide introducir puerto
+	def __init__(self, host=socket.gethostname(), port=input('\nEscriba el puerto \n')):
 		self.clientes = []
 		self.sock = socket.socket()
 		self.sock.bind((str(host), int(port)))

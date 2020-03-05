@@ -5,9 +5,7 @@ import pickle
 import os
 
 class Cliente():
-
-	puerto = input('\nEscriba el puerto \n')
-	def __init__(self, host=socket.gethostname(), port=puerto):
+	def __init__(self, host=input('\nEscriba la direccion {socket.gethostname()} \n'), port=input('\nEscriba el puerto \n')):
 		self.sock = socket.socket()
 		self.sock.connect((str(host), int(port)))
 		hilo_recv_mensaje = threading.Thread(target=self.recibir)
