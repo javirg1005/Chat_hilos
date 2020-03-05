@@ -57,6 +57,7 @@ class Servidor():
 			if len(self.clientes) > 0:
 				for c in self.clientes:
 					try:
+						print('Clientes conectados: ', len(self.clientes))
 						data = c.recv(32)
 						if data:
 							self.broadcast(data,c)
