@@ -45,7 +45,7 @@ class Servidor():
 		while True:
 			try:
 				conn, addr = self.sock.accept()
-				print(f"\nConexion aceptada via {addr}\n") ##Saca Ip de la conexion aceptada
+				print(f"\nConexion aceptada via {adrr}\n") ##Saca Ip de la conexion aceptada
 				conn.setblocking(False)
 				self.clientes.append(conn)
 			except:
